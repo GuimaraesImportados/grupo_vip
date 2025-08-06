@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 VIP Guimarães Importados - Grupo Exclusivo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto 30px;
+            filter: drop-shadow(0 10px 20px rgba(218, 165, 32, 0.3));
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 10px 20px rgba(218, 165, 32, 0.3)); }
+            to { filter: drop-shadow(0 15px 30px rgba(218, 165, 32, 0.5)); }
+        }
+
+        .vip-badge {
+            background: linear-gradient(45deg, #DAA520, #FFD700);
+            color: #1a1a1a;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px auto;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(218, 165, 32, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .headline {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 30px 0;
+            background: linear-gradient(45deg, #DAA520, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.2;
+        }
+
+        .subheadline {
+            font-size: 20px;
+            color: #e0e0e0;
+            margin: 20px 0;
+            line-height: 1.4;
+        }
+
+        .benefits {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(218, 165, 32, 0.3);
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .benefit-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #DAA520;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 30px 0;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+        }
+
+        .urgency {
+            background: linear-gradient(45deg, #ff4444, #cc0000);
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+            animation: flash 2s infinite;
+        }
+
+        @keyframes flash {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.7; }
+        }
+
+        .social-proof {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #ccc;
+        }
+
+        .whatsapp-icon {
+            font-size: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .footer {
+            margin-top: 30px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 28px;
+            }
+            
+            .subheadline {
+                font-size: 18px;
+            }
+            
+            .cta-button {
+                padding: 18px 35px;
+                font-size: 20px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+
+        .floating-perfume {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .floating-perfume:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .floating-perfume:nth-child(2) { top: 20%; right: 10%; animation-delay: 2s; }
+        .floating-perfume:nth-child(3) { bottom: 30%; left: 15%; animation-delay: 4s; }
+        .floating-perfume:nth-child(4) { bottom: 20%; right: 15%; animation-delay: 1s; }
+
+    </style>
+</head>
+<body>
+    <!-- Elementos flutuantes decorativos -->
+    <div class="floating-perfume">💎</div>
+    <div class="floating-perfume">✨</div>
+    <div class="floating-perfume">👑</div>
+    <div class="floating-perfume">🔥</div>
+
+    <div class="container">
+        <!-- Logo -->
+        <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 20px; border-radius: 20px; margin-bottom: 20px;">
+            <div style="color: #DAA520; font-size: 48px; font-weight: bold; margin-bottom: 10px; font-family: 'Georgia', serif;">
+                GUIMARÃES
+            </div>
+            <div style="color: #DAA520; font-size: 48px; font-weight: bold; margin-bottom: 15px; font-family: 'Georgia', serif;">
+                IMPORTADOS
+            </div>
+            <div style="color: white; font-size: 24px; letter-spacing: 2px; font-weight: 300;">
+                PERFUMES
+            </div>
+        </div>
+
+        <!-- Badge VIP -->
+        <div class="vip-badge">
+            👑 GRUPO VIP EXCLUSIVO 👑
+        </div>
+
+        <!-- Headline -->
+        <h1 class="headline">
+            ACESSO EXCLUSIVO AOS MELHORES PERFUMES IMPORTADOS
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="subheadline">
+            Entre no grupo VIP e tenha acesso a ofertas exclusivas, lançamentos em primeira mão e descontos que não divulgamos em lugar nenhum!
+        </p>
+
+        <!-- Urgência -->
+        <div class="urgency">
+            🚨 VAGAS LIMITADAS - APENAS 100 NOVOS VIPs ESTE MÊS! 🚨
+        </div>
+
+        <!-- Benefícios -->
+        <div class="benefits">
+            <h3 style="color: #DAA520; margin-bottom: 20px; font-size: 24px;">O QUE VOCÊ GANHA SENDO VIP:</h3>
+            
+            <div class="benefit-item">
+                <span class="benefit-icon">💰</span>
+                <span>Descontos exclusivos de até 50% OFF</span>
+            </div>
+            
+            <div class="benefit-item">
+                <span class="benefit-icon">🚀</span>
+                <span>Primeira chance nos lançamentos</span>
+            </div>
+            
+            <div class="benefit-item">
+                <span class="benefit-icon">🎁</span>
+                <span>Ofertas relâmpago só para VIPs</span>
+            </div>
+            
+            <div class="benefit-item">
+                <span class="benefit-icon">👑</span>
+                <span>Atendimento prioritário VIP</span>
+            </div>
+            
+            <div class="benefit-item">
+                <span class="benefit-icon">📱</span>
+                <span>Consultorias exclusivas de perfumes</span>
+            </div>
+            
+            <div class="benefit-item">
+                <span class="benefit-icon">🔥</span>
+                <span>Acesso a perfumes importados raros</span>
+            </div>
+        </div>
+
+        <!-- Prova Social -->
+        <div class="social-proof">
+            ⭐⭐⭐⭐⭐<br>
+            "No grupo VIP eu sempre fico sabendo dos lançamentos primeiro e consigo os melhores preços! Já economizei mais de R$ 400!" - Maria S., Cliente VIP
+        </div>
+
+        <!-- CTA Principal -->
+        <a href="https://chat.whatsapp.com/I3doO9LtGHT6yu1onkPSl4" class="cta-button" target="_blank">
+            <span class="whatsapp-icon">📱</span>
+            ENTRAR NO GRUPO VIP AGORA
+        </a>
+
+        <!-- Urgência Final -->
+        <div style="background: rgba(218, 165, 32, 0.2); border: 2px solid #DAA520; border-radius: 15px; padding: 20px; margin: 20px 0;">
+            <p style="font-size: 18px; font-weight: bold; color: #DAA520;">
+                ⏰ NÃO PERCA! PRÓXIMAS OFERTAS EXCLUSIVAS SAEM EM BREVE!
+            </p>
+            <p style="margin-top: 10px; color: #e0e0e0;">
+                Seja um dos primeiros a saber e garanta os melhores perfumes importados com preços VIP!
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 Guimarães Importados Perfumes - Grupo VIP Exclusivo</p>
+            <p>Acesso 100% gratuito • Ofertas limitadas • Apenas para VIPs</p>
+        </div>
+    </div>
+
+    <script>
+        // Efeito de clique no botão
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1.05)';
+            }, 100);
+        });
+
+        // Efeitos de animação ao carregar
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Tracking de cliques (opcional)
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            // Aqui você pode adicionar código de tracking
+            console.log('Clique no botão VIP registrado');
+        });
+    </script>
+</body>
+</html>
