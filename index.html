@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🔥 VIP Guimarães Importados - Grupo Exclusivo</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1556825768617074');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1556825768617074&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
     <style>
         * {
             margin: 0;
@@ -289,7 +308,7 @@
         </div>
 
         <!-- CTA Principal -->
-        <a href="https://chat.whatsapp.com/I3doO9LtGHT6yu1onkPSl4" class="cta-button" target="_blank">
+        <a href="https://chat.whatsapp.com/I3doO9LtGHT6yu1onkPSl4" class="cta-button" target="_blank" onclick="trackConversion()">
             <span class="whatsapp-icon">📱</span>
             ENTRAR NO GRUPO VIP AGORA
         </a>
@@ -300,7 +319,7 @@
                 ⏰ NÃO PERCA! PRÓXIMAS OFERTAS EXCLUSIVAS SAEM EM BREVE!
             </p>
             <p style="margin-top: 10px; color: #e0e0e0;">
-                Seja um dos primeiros a saber e garanta os melhores perfumes importados com preços VIP!
+                Seja um dos primeiros a saber e garante os melhores perfumes importados com preços VIP!
             </p>
         </div>
 
@@ -312,6 +331,19 @@
     </div>
 
     <script>
+        // Função para rastrear conversão
+        function trackConversion() {
+            // Meta Pixel - Lead Event
+            fbq('track', 'Lead', {
+                content_name: 'VIP Group Access',
+                content_category: 'WhatsApp Group',
+                value: 0,
+                currency: 'BRL'
+            });
+            
+            console.log('Conversão para grupo VIP registrada!');
+        }
+
         // Efeito de clique no botão
         document.querySelector('.cta-button').addEventListener('click', function() {
             this.style.transform = 'scale(0.95)';
@@ -329,12 +361,29 @@
             }, 100);
         });
 
-        // Tracking de cliques (opcional)
-        document.querySelector('.cta-button').addEventListener('click', function() {
-            // Aqui você pode adicionar código de tracking
-            console.log('Clique no botão VIP registrado');
+        // Tracking de tempo na página
+        let startTime = Date.now();
+        window.addEventListener('beforeunload', function() {
+            let timeSpent = Math.round((Date.now() - startTime) / 1000);
+            fbq('trackCustom', 'TimeOnPage', {
+                time_spent: timeSpent,
+                page_type: 'landing_page'
+            });
+        });
+
+        // Tracking de scroll depth
+        let maxScroll = 0;
+        window.addEventListener('scroll', function() {
+            let scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+                if (maxScroll >= 75) {
+                    fbq('trackCustom', 'ScrollDepth75', {
+                        scroll_depth: maxScroll
+                    });
+                }
+            }
         });
     </script>
 </body>
-
 </html>
